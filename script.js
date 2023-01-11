@@ -18,3 +18,10 @@ function HigherOrLower(price) {
     }
 }
 
+function Guess(){
+    
+    let price = document.getElementById('prix');
+    
+
+
+}
