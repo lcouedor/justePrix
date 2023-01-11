@@ -7,21 +7,28 @@ let obj = [
     {name: 'armoire', price : '2000'}];
 
 
+let divProduit = document.getElementById("produit");
+let divResult = document.getElementById("result")
+let btnValide = document.getElementById("verif");
 
 function HigherOrLower(price) {
     if(obj[selectedObject].price > price) {
-        return 'sup' // true si supérieur
+        divResult.innerHTML="C'est moins" // true si supérieur
     } else if(obj[selectedObject].price < price) {
-        return 'inf' // false si inférieur
+        divResult.innerHTML="C'est plus" // false si inférieur
     } else if(obj[selectedObject].price == price) {
-        return 'egal' // egal si égal
+        divResult.innerHTML="Oui oui oui, c'est gagné !" // egal si égal
+        btnValide.disabled = "true";
     }
 }
 
-function Guess(){
-    
-    let price = document.getElementById('prix');
-    
-
-
+function init(){
+    divProduit.innerHTML = obj[selectedObject].name
 }
+
+function Guess(){
+    let price = document.getElementById('prix');
+    HigherOrLower(price);
+}
+init();
+btnValide.addEventListener("click",Guess);
