@@ -1,0 +1,49 @@
+body {
+    --couleurFond: #252525;
+    background-color: var(--couleurFond);
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    margin: 20px;
+    font-variant: small-caps;
+}
+
+input, button {
+    padding: 5px;
+    color: white;
+}
+
+input {
+    width: 100px;
+    background: none;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--couleurFond);
+    cursor: pointer;
+    text-align: start;
+    border: none;
+    border-bottom: 2px solid white;
+}
+
+input:focus {
+    outline: none;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animationZoom {
+    animation: zoom 1s ease-out;
+}
